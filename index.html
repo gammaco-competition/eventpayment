@@ -1057,38 +1057,39 @@
         for (let i = 1; i <= 10; i++) {
           let suffix = (i === 1) ? "" : (i - 1).toString();
           let requiredAttr = (i === 1) ? "required" : "";
+          
+          // ลบแถบ alert-info-text ออกเรียบร้อยแล้ว
           let teamHtml = `
           <div class="card-custom hidden-team" id="team${i}">
             <div class="team-header-banner"><strong class="fs-5">Team ${i}</strong></div>
-            // <div class="card-body-padding">
-            //   <div class="alert-info-text alert-team-info"><i class="fa-solid fa-circle-info"></i> ประเภท Robomission และ Future Innovators ให้เลือกรุ่นอายุ (Age Group)</div>
+            <div class="card-body-padding">
               <div class="row g-3">
                 <div class="col-md-6">
-                  <label class="form-label-custom lbl-age"><i class="fa-solid fa-graduation-cap"></i> รุ่นอายุ</label>
+                  <label class="form-label-custom lbl-age"><i class="fa-solid fa-graduation-cap"></i> รุ่นอายุ / Age Group</label>
                   <select class="form-select-custom" id="colA${suffix}" ${requiredAttr}>
                     <option value="" selected>Choose</option>
                   </select>
                 </div>
                 <div class="col-md-6">
-                  <label class="form-label-custom lbl-tid"><i class="fa-solid fa-id-badge"></i> ทีมไอดี</label>
+                  <label class="form-label-custom lbl-tid"><i class="fa-solid fa-id-badge"></i> ทีมไอดี / Team ID</label>
                   <select class="form-select-custom" id="colB${suffix}" ${requiredAttr}>
                     <option value="" selected>Choose</option>
                   </select>
                 </div>
                 <div class="col-md-5">
-                  <label class="form-label-custom lbl-tname"><i class="fa-solid fa-pen-to-square"></i> ชื่อทีม</label>
+                  <label class="form-label-custom lbl-tname"><i class="fa-solid fa-pen-to-square"></i> ชื่อทีม / Team Name</label>
                   <select class="form-select-custom" id="colC${suffix}" ${requiredAttr}>
                     <option value=""></option>
                   </select>
                 </div>
                 <div class="col-md-7">
-                  <label class="form-label-custom lbl-inst"><i class="fa-solid fa-building-columns"></i> สถาบัน</label>
+                  <label class="form-label-custom lbl-inst"><i class="fa-solid fa-building-columns"></i> สถาบัน / Institution</label>
                   <select class="form-select-custom" id="colD${suffix}">
                     <option value=""></option>
                   </select>
                 </div>
               </div>
-            // </div>
+            </div>
           </div>`;
           document.write(teamHtml);
         }
